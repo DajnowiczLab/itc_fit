@@ -15,7 +15,7 @@ dependencies = [
     "tqdm"
 ]
 
-[tool.setuptools.packages.find]
-where = ["src"]
-include = ["itc_fit*"]
-namespaces = true
+[tool.setuptools]
+# Tells setuptools to automatically discover your package directories
+package-dir = { "" = "src" }
+packages = { find = { where = ["src"] } }
