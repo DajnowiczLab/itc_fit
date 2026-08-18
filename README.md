@@ -6,14 +6,7 @@ This program analyzes data from VPITC and ITC200 ITC calorimeters.
 The data format is expected to be in 2 columns, formatted such that the first column is the heat released after injection `i` (in microcalories) and the second column is the volume of injection `i` (in microliters)
 Additional columns are ignored. Please see the included file for an example. 
 The first line of the input is assumed to be a header and discarded; the last line of the input is assumed to be a footer and is discarded.
-The default values---and explanation---of the syringe error, cell error, heat error, and base error are taken from:
-
-**Evaluation and Minimization of Uncertainty in ITC Binding Measurements: Heat Error, Concentration Error, Saturation, and Stoichiometry**
-Samuel A. Kantonen, Niel M. Henriksen, Michael K. Gilson
-*Biochimica et Biophysica Acta (BBA) - General Subjects* (2017-02) <https://doi.org/f9px57>
-DOI: [10.1016/j.bbagen.2016.09.002](https://doi.org/10.1016/j.bbagen.2016.09.002) · PMID: [27599357](http://www.ncbi.nlm.nih.gov/pubmed/27599357) · PMCID: [PMC5195854](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC5195854)
-
-These values are currently hard coded at the top of the file and can be easily changed.
+The default values---and explanation---of the syringe error, cell error, heat error, and base error are taken from: These values are currently hard coded at the top of the file and can be easily changed.
 
 Equations for the ITC model are taken from Appendix A in the [MicroCal manual](http://www.isbg.fr/IMG/pdf/microcal-itc200-system-user-manual-malvern.pdf). Specifically, equations 1 through 10.
 
@@ -71,10 +64,7 @@ And generate a plot similar to this:
 
 This Python 3 code depends on `numpy` for data processing, `scipy` for curve fitting, `matplotlib` for plotting, and `tqdm` for a progress bar, which can be installed using `pip install tqdm`.
 
-## Contributors
-
-- David Slochower 
-- Niel Henriksen
-- Michael Schauperl
-- Katy Kellett
-- Sam Kantonen
+## Acknowledgement & Citation
+This notebook builds upon the mathematical framework and algorithms originally developed by the Gilson Lab at UC San Diego: 
+- Original Code: [itc_fit](https://github.com/GilsonLabUCSD/itc_fit) 
+- Evaluation and Minimization of Uncertainty in ITC Binding Measurements: Heat Error, Concentration Error, Saturation, and Stoichiometry Samuel A. Kantonen, Niel M. Henriksen, Michael K. Gilson Biochimica et Biophysica Acta (BBA) - General Subjects (2017-02)
