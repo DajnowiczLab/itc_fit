@@ -29,7 +29,8 @@ def parse_arguments(argv) -> argparse.Namespace:
         required=False,
     )
     ap.add_argument(
-        "-M0",
+        "-M",
+        "--M0",
         help="Cell concentration in Molar (default: 0.005 M)",
         type=float,
         default=0.005,
