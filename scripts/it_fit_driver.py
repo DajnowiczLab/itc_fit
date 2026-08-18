@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 from itc_fit.parser import parse_itc_data
 from itc_fit.utils import plot, report
-from itc_fit.bootstrap import run_fitting, InputData, InitalGuess
+from itc_fit.bootstrap import run_fitting, InputData, InitialGuess
 
 def parse_arguments(argv) -> argparse.Namespace:
 
@@ -72,7 +72,7 @@ def main(argv):
     # dQ and XM include the complete data from the ITC output file.
     # We refer to dQ as the heat release measured by the ITC and dH as the reaction enthalpy obtained from the fitting
     # process
-    vardQ, XM, dH, K, N, dG, dG_sem = run_fitting(input_data, InitalGuess(dH=1000.0))
+    vardQ, XM, dH, K, N, dG, dG_sem = run_fitting(input_data, InitialGuess(dH=1000.0))
 
     report(
         input_data.V0,

@@ -12,7 +12,7 @@ from tqdm import tqdm
 # 05/08/19 Changed how the code deals with skipping of the first n data points
 # Renamed variables
 
-class InitalGuess(NamedTuple):
+class InitialGuess(NamedTuple):
     dH: float = -1000.0
     K: float = 1000.0
     N: float = 1.0
@@ -71,7 +71,7 @@ def fit(XMa: np.ndarray, dH: float, K: float, N: float, input_data: InputData) -
     return dQ[input_data.skip + 1 :]
 
 
-def run_fitting(input_data: InputData, guess: InitalGuess) -> FitResult:
+def run_fitting(input_data: InputData, guess: InitialGuess) -> FitResult:
     """
     Bootstrap the fitting of dQ given re-sampled uncertainties.
     """
