@@ -14,8 +14,3 @@ dependencies = [
     "matplotlib",
     "tqdm"
 ]
-
-[tool.setuptools]
-# Tells setuptools to automatically discover your package directories
-package-dir = { "" = "src" }
-packages = { find = { where = ["src"] } }
